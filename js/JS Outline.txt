@@ -1,0 +1,23 @@
+
+	// Step 1: Download list of pdfs, hosted by the server.
+	// Step 2: For each pdf in list, insert a link
+
+	// Psuedo-code:
+
+	// Download list of pdfs
+	ajax.download("http://server.org/MeetingMinutePDFs.xml").done(
+		// File has finished downloading, and now below code will run.
+		// Parse file
+		json = parse(file);
+
+		// For each pdf, insert a link
+		for ( i = 0; i < json["files"].length ; i++ ) {
+			// Get pdf location
+			pdf = json["Files"];
+
+			// Append link
+			(some div).append(
+				"<a href=\"pdf\">Meeting minutes " + i + "</a>"
+			);
+		}
+	);
